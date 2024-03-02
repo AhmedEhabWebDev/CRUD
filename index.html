@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="w-75 mx-auto py-5">
+      <h1 class="mb-4">Store Management</h1>
+      <label for="productNameInput">Product Name</label>
+      <input type="text" id="productNameInput" class="form-control mb-3">
+      <label for="productPriceInput">Product Price</label>
+      <input type="text" id="productPriceInput" class="form-control mb-3">
+      <label for="productCategoryInput">Product Category</label>
+      <input type="text" id="productCategoryInput" class="form-control mb-3">
+      <label for="productDescInput">Product Desc</label>
+      <textarea type="text" id="productDescInput" class="form-control mb-3"></textarea>
+      <button id="addBtn" onclick="addProduct()" class="btn btn-outline-primary">Add Product</button>
+      <button id="updateBtn" onclick="updateProduct()" class="d-none btn btn-outline-warning">Update Product</button>
+    </div>
+    <div class="w-75 mx-auto p-5 ">
+      <input type="text" id="productSearchInput" oninput="searchProduct(this.value)" placeholder="Search by Name" class="form-control mb-3">
+    </div>
+    <div class="w-75 mx-auto py-5 text-center">
+      <table class="table">
+        <thead>
+          <th>Index</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+  
+    <script src="main.js"></script>
+  </body>
+</html>
